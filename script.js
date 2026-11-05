@@ -17,7 +17,27 @@ function addCustomerBtn() {
     customerList.push(customer);
     console.log(customerList);
 
-    
+    let customerBody = `
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    `
+
+    for(let customers of customerList) {
+        customerBody += `
+            <tr>
+                <td>${customers.name}</td>
+                <td>${customers.address}</td>
+                <td>${customers.email}</td>
+                <td>${customers.phone}</td>
+            </tr>
+        `;
+    }
+
+    document.getElementById("customerTable").innerHTML = customerBody;
 }
 
 function addItemBtn() {
@@ -29,8 +49,28 @@ function addItemBtn() {
         itemName: itemName,
         itemPrice: itemPrice,
         itemQuantity: itemQuantity
-    };  
+    };
 
     itemList.push(item);
     console.log(item);
+
+    let itemBody = `
+        <tr>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Quantity</th>
+        </tr>
+    `
+
+    for(let items of itemList) {
+        itemBody += `
+            <tr>
+                <td>${items.itemName}</td>
+                <td>${items.itemPrice}</td>
+                <td>${items.itemQuantity}</td>
+            </tr>
+        `;
+    }
+
+    document.getElementById("itemTable").innerHTML = itemBody;
 }
