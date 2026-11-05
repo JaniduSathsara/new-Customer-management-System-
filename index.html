@@ -16,30 +16,80 @@
 </head>
 
 <body>
-    <div class="card" style="max-width: 320px;">
-        <div class="card-body">
-            <h4 class="card-title">Customer Form</h4>
-            <p class="card-subtitle fg-3">Enter customer details</p>
-            <input type="text" class="form-control" placeholder="Enter Name" id="name">
-            <input type="text" class="form-control" placeholder="Enter Address" id="address">
-            <input type="text" class="form-control" placeholder="Enter Email" id="email">
-            <input type="text" class="form-control" placeholder="Enter Phone" id="phone">
-            <button class="btn-solid theme-primary" id="addCustomer">Add Customer</button>
-        </div>
-    </div>
-    <br>
-    <div class="card" style="max-width: 320px;">
-        <div class="card-body">
-            <h4 class="card-title">Item Form</h4>
-            <p class="card-subtitle fg-3">Enter item details</p>
-            <input type="text" class="form-control" placeholder="Enter Item Name" id="itemName">
-            <input type="text" class="form-control" placeholder="Enter Price" id="itemPrice">
-            <input type="text" class="form-control" placeholder="Enter Quantity" id="itemQuantity">
-            <button class="btn-solid theme-primary" id="addItem">Add Item</button>
-        </div>
-    </div>
 
+    <div class="container mt-5">
+        <h1 class="align text-center">Customer Management System</h1>
+        <table border="0" cellspacing="10" cellpadding="10">
+            <tr>
+                <td>
+                    <div class="card" style="max-width: 320px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Customer Form</h4>
+                            <p class="card-subtitle fg-3">Enter customer details</p>
+                            <input type="text" class="form-control" placeholder="Enter Name" id="name">
+                            <input type="text" class="form-control" placeholder="Enter Address" id="address">
+                            <input type="text" class="form-control" placeholder="Enter Email" id="email">
+                            <input type="text" class="form-control" placeholder="Enter Phone" id="phone">
+                            <button class="btn-solid theme-primary" id="addCustomer" onclick="addCustomerBtn()">Add
+                                Customer</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card" style="max-width: 320px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Customer Table</h4>
+                            <p class="card-subtitle fg-3">List of customers</p>
+                            <table class="table table-striped" id="customerTable">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="card" style="max-width: 320px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Item Form</h4>
+                            <p class="card-subtitle fg-3">Enter item details</p>
+                            <input type="text" class="form-control" placeholder="Enter Item Name" id="itemName">
+                            <input type="text" class="form-control" placeholder="Enter Price" id="itemPrice">
+                            <input type="text" class="form-control" placeholder="Enter Quantity" id="itemQuantity">
+                            <button class="btn-solid theme-primary" id="addItem" onclick="addItemBtn()">Add
+                                Item</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card" style="max-width: 320px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Item Table</h4>
+                            <p class="card-subtitle fg-3">List of items</p>
+                            <table class="table table-striped" id="itemTable">
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
     <script src="script.js"></script>
+</body>
+
+<script src="script.js"></script>
 </body>
 
 </html>
